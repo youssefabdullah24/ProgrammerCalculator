@@ -5,4 +5,6 @@
     <string name="octal">Octal</string>
     <string name="binary">Binary</string>
     <string name="clear">Clear</string>
+    <string name="icon">icon</string>
+    <string name="programmer_calculator">Programmer Calculator</string>
 </resources>

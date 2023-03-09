@@ -4,27 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingStart="25dp"
-    android:paddingEnd="25dp"
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/decTv"
+    <ImageView
+        android:id="@+id/iconIv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/decimal"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:layout_marginTop="62dp"
+        android:contentDescription="@string/icon"
+        android:src="@drawable/app_icon"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/titleTv"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/programmer_calculator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iconIv" />
+
+    <TextView
+        android:id="@+id/decTv"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/decimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTv" />
+
     <EditText
         android:id="@+id/decEt"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
+        style="@style/EditTextStyle"
         android:digits="0123456789"
-        android:hint="@string/decimal"
         android:importantForAutofill="no"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,20 +52,15 @@
 
     <TextView
         android:id="@+id/hexTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/TextViewStyle"
         android:text="@string/hex"
-        android:textSize="18sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/decEt" />
 
     <EditText
         android:id="@+id/hexEt"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
+        style="@style/EditTextStyle"
         android:digits="0123456789abcdefABCDEF"
-        android:hint="@string/hex"
         android:importantForAutofill="no"
         android:inputType="textCapCharacters"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,20 +69,15 @@
 
     <TextView
         android:id="@+id/octTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/TextViewStyle"
         android:text="@string/octal"
-        android:textSize="18sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/hexEt" />
 
     <EditText
         android:id="@+id/octEt"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
+        style="@style/EditTextStyle"
         android:digits="01234567"
-        android:hint="@string/octal"
         android:importantForAutofill="no"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,36 +86,31 @@
 
     <TextView
         android:id="@+id/binTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/TextViewStyle"
         android:text="@string/binary"
-        android:textSize="18sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/octEt" />
 
     <EditText
         android:id="@+id/binEt"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
+        style="@style/EditTextStyle"
         android:digits="01"
-        android:hint="@string/binary"
         android:importantForAutofill="no"
         android:inputType="numberDecimal"
-        android:maxLength="64"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/binTv" />
 
     <Button
         android:id="@+id/clearBtn"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:backgroundTint="@color/edit_text_background"
         android:text="@string/clear"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/binEt" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
